@@ -1,20 +1,8 @@
-import React from 'react';
-import { Offcanvas } from 'react-bootstrap';
+import { useLocation } from "react-router-dom";
+import { SidebarView } from "./Sidebar.component.view";
 
-interface SidebarVO { sidebarBody: () => React.ReactElement; }
+export const Sidebar: React.FC = () => {
+    const { pathname } = useLocation();
 
-export const Sidebar: React.FC<SidebarVO> = (
-  props: SidebarVO,
-) => {
-    const { sidebarBody } = props;
-    return (
-        <>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Course Panel</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            {sidebarBody()}
-          </Offcanvas.Body>
-        </>
-    )
+    return <SidebarView pathName={pathname} />;
 }
