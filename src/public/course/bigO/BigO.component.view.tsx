@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImgProvider } from 'src/core/provider/Image.provider';
-import { Block } from '../_shared/components/block/Block.component';
+import { Block } from 'src/public/_shared/components/block/Block.component';
 
 export const BigOView: React.FC = () => {
     const renderHighlightedO = () => <span className="text-info">O</span>;
