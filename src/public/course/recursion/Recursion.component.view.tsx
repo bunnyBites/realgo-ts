@@ -41,7 +41,7 @@ export const RecursionView: React.FC<RecursionViewPropType> = (
     const renderOutputView = () => (
         <>
             <div className="pb-2">Output: </div>
-            <div className="d-inline-flex p-3 rounded bg-success text-white">
+            <div className="d-inline-flex p-3 rounded bg-info text-white">
                 {outputValue}
             </div>
         </>
@@ -50,6 +50,7 @@ export const RecursionView: React.FC<RecursionViewPropType> = (
     return (
         <Block>
             <div className="container">
+                <div className="display-5 pb-3 text-info">Fibonocci (Recursion)</div>
                 {renderInputField()}
                 {renderOutputIllustrationView()}
                 {renderOutputView()}
